@@ -8,6 +8,9 @@ streamlit.text ('🥗 kale, Spanich & Rocket Smothie')
 streamlit.text ('🐔 Hard-Boiled Free-Range Eggs') 
 streamlit.text ('🥑🍞 Avocado toast') 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-
+#Display The table on the page
 my_fruit_list = pd.read_csv ('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt') 
 streamlit.dataframe(my_fruit_list)
+#Fruit multiselect 
+streamlit.multiselect ( "Pick Some Fruits:", list(my_fruit_list.index))
+
